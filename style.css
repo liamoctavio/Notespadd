@@ -1,0 +1,169 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f9fc;
+}
+
+.welcome-page {
+    background-image: url('assets/img/premium_photo-1684444605542-93725082d214.avif');
+    background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+h1 {
+    color: #004085;
+}
+
+.welcome-page h1 {
+    color: #004085;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para el texto */
+    font-size: 3rem; /* Tamaño de fuente */
+    font-weight: bold; /* Grosor de la fuente */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+p {
+    color: #333333;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Sombra para el texto */
+}
+
+
+.bg-overlay {
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+#note-board .note-card {
+    border-radius: 8px;
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+#note-board .note-card:hover {
+    transform: scale(1.02);
+}
+
+.note-card-title {
+    font-weight: bold;
+    color: #0056b3;
+}
+
+.note-card-content {
+    color: #333333;
+}
+
+.navbar-brand, .nav-link {
+    font-weight: bold;
+}
+
+/* ANTES DE
+body.login-page {
+    background-color: #f7f9fc;
+    font-family: Arial, sans-serif;
+}
+
+body.login-page .card {
+    margin-top: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body.login-page .card-title {
+    margin-bottom: 20px;
+    color: #004085;
+}
+
+body.login-page .form-label {
+    color: #333333;
+}
+
+body.login-page .btn-primary {
+    background-color: #004085;
+    border-color: #004085;
+}
+
+body.login-page .btn-primary:hover {
+    background-color: #003366;
+    border-color: #003366;
+} */
+
+body.login-page {
+    background-image: url('assets/img/login-background.avif'); /* Asegúrate de que la ruta sea correcta */
+    background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    height: 100vh; /* Asegura que el fondo cubra toda la altura de la ventana */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body.login-page .container {
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente para el formulario */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px; /* Limita el ancho máximo del contenedor */
+    width: 100%; /* Asegura que el contenedor ocupe el 100% del ancho disponible */
+}
+
+body.login-page .card-title {
+    margin-bottom: 20px;
+    color: #004085;
+}
+
+body.login-page .form-label {
+    color: #333333;
+}
+
+body.login-page .btn-primary {
+    background-color: #004085;
+    border-color: #004085;
+}
+
+body.login-page .btn-primary:hover {
+    background-color: #003366;
+    border-color: #003366;
+}
+
+
+body.register-page {
+    background-image: url('assets/img/registe-image.avif'); /* Asegúrate de que la ruta sea correcta */
+    background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    height: 100vh; /* Asegura que el fondo cubra toda la altura de la ventana */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body.register-page .container {
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente para el formulario */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px; /* Limita el ancho máximo del contenedor */
+    width: 100%; /* Asegura que el contenedor ocupe el 100% del ancho disponible */
+}
+
+body.register-page .card-title {
+    margin-bottom: 20px;
+    color: #004085;
+}
+
+body.register-page .form-label {
+    color: #333333;
+}
+
+body.register-page .btn-primary {
+    background-color: #004085;
+    border-color: #004085;
+}
+
+body.register-page .btn-primary:hover {
+    background-color: #003366;
+    border-color: #003366;
+}
