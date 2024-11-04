@@ -140,6 +140,73 @@ document.addEventListener("DOMContentLoaded", function() {
         window.location.href = "login.html";
     });
 
+    // Controlador de eventos para el formulario de recuperación de contraseña
+    document.getElementById("recover-form")?.addEventListener("submit", function(event) {
+        event.preventDefault();
+        
+        const email = document.getElementById("recover-email").value;
+        
+        // Verificar si el email está registrado
+        const user = JSON.parse(localStorage.getItem(email));
+        if (user) {
+            alert("Se ha enviado un enlace de recuperación a tu correo electrónico.");
+            // 
+        } else {
+            alert("El correo electrónico no está registrado.");
+        }
+    });
+
+    // Controlador de eventos para el formulario de edición de nombre de usuario
+    document.getElementById("edit-username-form")?.addEventListener("submit", function(event) {
+        event.preventDefault();
+        
+        const newUsername = document.getElementById("new-username").value;
+        const email = localStorage.getItem("loggedInUser");
+        
+        if (email) {
+            let user;
+            try {
+                user = JSON.parse(localStorage.getItem(email));
+            } catch (e) {
+                console.error(`Error parsing JSON for key ${email}:`, e);
+            }
+            
+            if (user) {
+                user.username = newUsername;
+                localStorage.setItem(email, JSON.stringify(user));
+                alert("Nombre de usuario actualizado exitosamente.");
+                // Cerrar el modal después de actualizar el nombre de usuario
+                const editUsernameModal = bootstrap.Modal.getInstance(document.getElementById('editUsernameModal'));
+                editUsernameModal.hide();
+                // Actualizar el nombre de usuario en la página de perfil
+                document.getElementById("user-username").textContent = newUsername;
+            }
+        }
+    });
+
+    // Función para cargar datos del usuario en la página de perfil
+    function loadProfile() {
+        const email = localStorage.getItem("loggedInUser");
+        if (email) {
+            let user;
+            try {
+                user = JSON.parse(localStorage.getItem(email));
+            } catch (e) {
+                console.error(`Error parsing JSON for key ${email}:`, e);
+            }
+            
+            if (user) {
+                document.getElementById("user-email").textContent = email;
+                document.getElementById("user-username").textContent = user.username;
+            }
+        }
+    }
+
+    // Cargar datos del usuario en la página de perfil
+    if (document.body.classList.contains("profile-page")) {
+        loadProfile();
+    }
+
     // Función para cargar notas del usuario
     function loadNotes() {
         const email = localStorage.getItem("loggedInUser");
